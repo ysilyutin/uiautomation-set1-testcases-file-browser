@@ -25,7 +25,7 @@ test("<<< Test - Add Web Shortcut 'Box' >>>", function(target,app) {
      if (title == "E-mail/username") {
      UIALogger.logMessage("<<< Wait 4 seconds, input E-mail and click on 'OK' >>>");
      target.delay(4);
-     target.frontMostApp().keyboard().typeString("qa1moka5@gmail.com");
+     target.frontMostApp().keyboard().typeString("********@gmail.com");
      alert.buttons()["OK"].tap();
      return true;
      }
@@ -40,7 +40,7 @@ test("<<< Test - Add Web Shortcut 'Box' >>>", function(target,app) {
      if (title == "Password") {
      UIALogger.logMessage("<<< Wait 4 seconds, input password and click on 'OK' >>>");
      target.delay(4);
-     target.frontMostApp().keyboard().typeString("P@ssw0rd");
+     target.frontMostApp().keyboard().typeString("********");
      alert.buttons()["OK"].tap();
      return true;
      }
