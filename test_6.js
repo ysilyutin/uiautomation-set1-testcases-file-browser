@@ -25,10 +25,9 @@ test("<<< Test - Open JPG files >>>", function(target,app) {
 
      UIALogger.logMessage("<<< Opening files one by one >>>");
      target.delay(4);
-     target.frontMostApp().mainWindow().tableViews()["Search results"].cells()[i].tap();
-     target.frontMostApp().navigationBar().leftButton().tap();
      
                 UIALogger.logMessage("<<< Creating loop for cells()[i] >>>");
+                target.delay(4);
                 for (i = 1; i < 10; i++) { 
                     UIALogger.logMessage("<<< Open "+i+" file >>>");
                     target.delay(1);
