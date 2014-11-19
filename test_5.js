@@ -23,7 +23,7 @@ test("<<< Test - Add Web Shortcut 'Box' >>>", function(target,app) {
      var title = alert.name();
      UIALogger.logWarning("Alert with title '" + title + "' encountered!");
      if (title == "E-mail/username") {
-     UIALogger.logMessage("<<< Wait 4 seconds and click on 'OK' >>>");
+     UIALogger.logMessage("<<< Wait 4 seconds, input E-mail and click on 'OK' >>>");
      target.delay(4);
      target.frontMostApp().keyboard().typeString("********@gmail.com");
      alert.buttons()["OK"].tap();
@@ -32,14 +32,13 @@ test("<<< Test - Add Web Shortcut 'Box' >>>", function(target,app) {
      return false;
      }
      
-     UIALogger.logMessage("<<< Enter Email/username >>>");
      target.delay(4);
      target.frontMostApp().mainWindow().tableViews()["Empty list"].cells()["Password, (hidden)"].tap();
      UIATarget.onAlert = function onAlert(alert) {
      var title = alert.name();
      UIALogger.logWarning("Alert with title '" + title + "' encountered!");
      if (title == "Password") {
-     UIALogger.logMessage("<<< Wait 4 seconds and click on 'OK' >>>");
+     UIALogger.logMessage("<<< Wait 4 seconds, input password and click on 'OK' >>>");
      target.delay(4);
      target.frontMostApp().keyboard().typeString("********");
      alert.buttons()["OK"].tap();
